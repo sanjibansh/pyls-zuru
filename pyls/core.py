@@ -1,10 +1,7 @@
 import json
 import sys
-from datetime import datetime
-
-
-def format_time(epoch_time):
-    return datetime.fromtimestamp(epoch_time).strftime('%b %d %H:%M')
+from pyls.helper import format_time
+from pyls.helper import size_format
 
 
 def pyls(path='', include_all=False, detailed=False, reverse=False, sort_by_time=False, filter_option=None):
@@ -44,6 +41,7 @@ def pyls(path='', include_all=False, detailed=False, reverse=False, sort_by_time
     for item in contents:
         if detailed:
             formatted_time = format_time(item['time_modified'])
-            print(f"{item['permissions']} {item['size']} {formatted_time} {item['name']}")
+            formatted_size = size_format(item['size'])
+            print(f"{item['permissions']} {formatted_size} {formatted_time} {item['name']}")
         else:
             print(item['name'], end=" ")

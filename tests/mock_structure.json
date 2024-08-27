@@ -1,0 +1,30 @@
+{
+  "contents": [
+    {
+      "name": "file1.txt",
+      "permissions": "-rw-r--r--",
+      "size": 1024,
+      "time_modified": 1633072800
+    },
+    {
+      "name": "dir1",
+      "permissions": "drwxr-xr-x",
+      "size": 4096,
+      "time_modified": 1633072800,
+      "contents": [
+        {
+          "name": "file2.txt",
+          "permissions": "-rw-r--r--",
+          "size": 2048,
+          "time_modified": 1633072800
+        }
+      ]
+    },
+    {
+      "name": ".hidden_file",
+      "permissions": "-rw-r--r--",
+      "size": 512,
+      "time_modified": 1633072800
+    }
+  ]
+}
