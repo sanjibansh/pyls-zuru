@@ -39,7 +39,7 @@ def test_pyls_detailed(mock_format_time, mock_structure, capfd):
         pyls(detailed=True)
 
     captured = capfd.readouterr()
-    expected_output = "-rw-r--r-- 1024 Oct 01 12:50 file1.txt\ndrwxr-xr-x 4096 Oct 01 12:50 dir1\n"
+    expected_output = "-rw-r--r-- 1.0K Oct 01 12:50 file1.txt\ndrwxr-xr-x 4.0K Oct 01 12:50 dir1\n"
     assert expected_output == captured.out
 
 
