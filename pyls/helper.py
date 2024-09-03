@@ -11,4 +11,4 @@ def size_format(size):
             size /= 1024
             if size <= 1023:
                 return f"{size:.1f}{unit}"
-    return f"{size}B"
+    return f"{size}"
